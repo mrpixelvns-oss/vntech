@@ -1,0 +1,58 @@
+
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+.dark ::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* TipTap Editor Specifics (Enhancements over default Prose) */
+.ProseMirror {
+  outline: none;
+  min-height: 350px;
+}
+
+/* Placeholder */
+.ProseMirror p.is-editor-empty:first-child::before {
+  color: #94a3b8;
+  content: attr(data-placeholder);
+  float: left;
+  height: 0;
+  pointer-events: none;
+}
+
+/* Editor Images - Selected State */
+.ProseMirror img.ProseMirror-selectednode {
+  outline: 3px solid #00c4b4;
+  box-shadow: 0 0 0 5px rgba(0, 196, 180, 0.2);
+}
+
+/* GrapesJS Overrides */
+.gjs-cv-canvas {
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.gjs-editor {
+  background-color: #0f172a !important; 
+}
+.gjs-pn-panel {
+  position: relative !important;
+}

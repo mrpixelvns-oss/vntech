@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grifow Creative | Design Your Brand, Code Your Future</title>
+    <meta name="description" content="Grifow Creative - Chuyên thiết kế website, nhận diện thương hiệu và giải pháp marketing số." />
+    <!-- Added typography plugin -->
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- GrapesJS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/grapesjs/dist/css/grapes.min.css">
+    <!-- Link main CSS -->
+    <link rel="stylesheet" href="/index.css">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Manrope', 'sans-serif'], 
+              display: ['Space Grotesk', 'sans-serif'], 
+            },
+            colors: {
+              primary: '#ffffff', 
+              secondary: '#f8fafc',
+              dark: '#0f172a',
+              accent: '#00c4b4',
+              accentHover: '#009e91',
+              accentLight: '#ccf3f0',
+              brandText: '#334155',
+            },
+            boxShadow: {
+              'soft': '0 10px 40px -10px rgba(0,0,0,0.08)',
+              'card': '0 0 0 1px rgba(0,0,0,0.03), 0 2px 8px rgba(0,0,0,0.04)',
+            },
+            typography: (theme) => ({
+              DEFAULT: {
+                css: {
+                  maxWidth: 'none',
+                  color: theme('colors.slate.600'),
+                  lineHeight: '1.8',
+                  fontFamily: theme('fontFamily.sans'),
+                  h1: { 
+                    fontFamily: theme('fontFamily.display'), 
+                    color: theme('colors.slate.900'), 
+                    fontWeight: '800',
+                    marginTop: '2em',
+                    marginBottom: '1em',
+                    lineHeight: '1.2'
+                  },
+                  h2: { 
+                    fontFamily: theme('fontFamily.display'), 
+                    color: theme('colors.slate.900'), 
+                    fontWeight: '700', 
+                    marginTop: '2em', 
+                    marginBottom: '0.8em',
+                    lineHeight: '1.3'
+                  },
+                  h3: { 
+                    fontFamily: theme('fontFamily.display'), 
+                    color: theme('colors.slate.900'), 
+                    fontWeight: '600', 
+                    marginTop: '1.5em', 
+                    marginBottom: '0.6em',
+                    lineHeight: '1.4' 
+                  },
+                  h4: { 
+                    fontFamily: theme('fontFamily.display'), 
+                    color: theme('colors.slate.900'), 
+                    fontWeight: '600',
+                    marginTop: '1.5em',
+                    marginBottom: '0.5em'
+                  },
+                  'h2 + *': { marginTop: '0' },
+                  'h3 + *': { marginTop: '0' },
+                  strong: { color: theme('colors.slate.900'), fontWeight: '700' },
+                  a: { 
+                    color: theme('colors.accent'), 
+                    textDecoration: 'none', 
+                    fontWeight: '600', 
+                    transition: 'color 0.2s',
+                    '&:hover': { color: theme('colors.accentHover'), textDecoration: 'underline' } 
+                  },
+                  blockquote: { 
+                    borderLeftColor: theme('colors.accent'), 
+                    backgroundColor: theme('colors.slate.50'), 
+                    padding: '1.25rem', 
+                    fontStyle: 'italic', 
+                    borderRadius: '0 0.5rem 0.5rem 0',
+                    color: theme('colors.slate.700'),
+                    fontWeight: '500'
+                  },
+                  'ul > li::marker': { color: theme('colors.accent') },
+                  'ol > li::marker': { color: theme('colors.slate.900'), fontWeight: '600' },
+                  hr: { borderColor: theme('colors.slate.200'), marginTop: '3em', marginBottom: '3em' },
+                  img: { borderRadius: '1rem', marginTop: '2em', marginBottom: '2em', boxShadow: theme('boxShadow.soft') },
+                  code: { 
+                    color: theme('colors.slate.700'), 
+                    backgroundColor: theme('colors.slate.100'), 
+                    borderRadius: '0.25rem', 
+                    padding: '0.2em 0.4em', 
+                    fontWeight: '600' 
+                  },
+                  'code::before': { content: '""' },
+                  'code::after': { content: '""' },
+                },
+              },
+              invert: {
+                css: {
+                  color: theme('colors.slate.300'),
+                  h1: { color: theme('colors.white') },
+                  h2: { color: theme('colors.white') },
+                  h3: { color: theme('colors.white') },
+                  h4: { color: theme('colors.white') },
+                  strong: { color: theme('colors.white') },
+                  blockquote: { 
+                    color: theme('colors.slate.300'), 
+                    backgroundColor: theme('colors.slate.800/50'),
+                    borderLeftColor: theme('colors.accent')
+                  },
+                  a: { color: theme('colors.accent'), '&:hover': { color: theme('colors.white') } },
+                  hr: { borderColor: theme('colors.slate.700') },
+                  code: { color: theme('colors.slate.200'), backgroundColor: theme('colors.slate.800') },
+                  'ol > li::marker': { color: theme('colors.white') },
+                },
+              },
+            }),
+          }
+        }
+      }
+    </script>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.1",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.1/",
+    "react/": "https://esm.sh/react@^19.2.1/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.559.0",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.10.1",
+    "framer-motion": "https://esm.sh/framer-motion@^12.23.26",
+    "@emailjs/browser": "https://esm.sh/@emailjs/browser@^4.4.1",
+    "@supabase/supabase-js": "https://esm.sh/@supabase/supabase-js@^2.87.1",
+    "recharts": "https://esm.sh/recharts@^3.5.1",
+    "@tiptap/react": "https://esm.sh/@tiptap/react@^3.13.0",
+    "@tiptap/starter-kit": "https://esm.sh/@tiptap/starter-kit@^3.13.0",
+    "@tiptap/extension-image": "https://esm.sh/@tiptap/extension-image@^3.13.0",
+    "@tiptap/extension-link": "https://esm.sh/@tiptap/extension-link@^3.13.0",
+    "@tiptap/extension-placeholder": "https://esm.sh/@tiptap/extension-placeholder@^3.13.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.32.0",
+    "grapesjs": "https://esm.sh/grapesjs@^0.22.14"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
